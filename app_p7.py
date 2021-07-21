@@ -4,7 +4,7 @@ import pandas as pd
 import shap
 import streamlit as st
 import streamlit.components.v1 as components
-from xgboost.sklearn import XGBClassifier
+import xgboost
 
 #loaing model and data
 df_test=pd.read_csv('test.csv')#original data without target
