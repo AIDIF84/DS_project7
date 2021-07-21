@@ -1,10 +1,3 @@
-
-# coding: utf-8
-
-# In[ ]:
-
-
-# This is a sample Python script.
 import matplotlib.pyplot as plt
 import pickle
 import pandas as pd
@@ -16,10 +9,6 @@ import streamlit.components.v1 as components
 df_test=pd.read_csv('test.csv')#original data without target
 X_test=pd.read_csv('df_X_test.csv')#data transformed with predict probability and target
 # read pickle files
-
-
-#explainer_ = open("explainer.pkl","rb")
-#explainer = pickle.load(explainer_)
 
 shap_values_ = open("shap_values.pkl","rb")
 shap_values = pickle.load(shap_values_)
