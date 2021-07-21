@@ -4,12 +4,15 @@ import pandas as pd
 import shap
 import streamlit as st
 import streamlit.components.v1 as components
-import xgboost
 
 #loaing model and data
 df_test=pd.read_csv('test.csv')#original data without target
 X_test=pd.read_csv('df_X_test.csv')#data transformed with predict probability and target
 # read pickle files
+
+
+#explainer_ = open("explainer.pkl","rb")
+#explainer = pickle.load(explainer_)
 
 shap_values_ = open("shap_values.pkl","rb")
 shap_values = pickle.load(shap_values_)
@@ -23,7 +26,7 @@ xgb_model = pickle.load(xgb_model_in)
 X_shap=X_test[features_selected]
 explainer = shap.TreeExplainer(xgb_model)
 #shap_values = explainer(X_shap)
-
+@st.cache()
 def get_sk_id_list():
     # Getting the values of SK_IDS from the content
     SK_IDS = df_test['SK_ID_CURR']
@@ -52,7 +55,7 @@ st.write(prob)
 
 submit = st.button('Get explain')
 # explain model prediction results
-
+@st.cache()
 def st_shap(plot, height=None):
     shap_html = f"<head>{shap.getjs()}</head><body>{plot.html()}</body>"
     components.html(shap_html, height=height)
