@@ -9,6 +9,7 @@ import streamlit.components.v1 as components
 df_test=pd.read_csv('test.csv')#original data without target
 X_test=pd.read_csv('df_X_test.csv')#data transformed with predict probability and target
 # read pickle files
+df_test = df_test.drop(['AMT_TOTAL_RECEIVABLE'], axis=1)
 
 
 #explainer_ = open("explainer.pkl","rb")
