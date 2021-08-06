@@ -24,8 +24,8 @@ X_test=pd.read_csv('df_X_test.csv')#data transformed with predict probability an
 df_test = df_test.drop(['AMT_TOTAL_RECEIVABLE'], axis=1)
 
 #shap values
-#shap_values_ = open("shap_values.pkl","rb")
-#shap_values = pickle.load(shap_values_)
+shap_values_ = open("shap_values.pkl","rb")
+shap_values = pickle.load(shap_values_)
 #features
 features_selected_in = open("features_selected.pkl","rb")
 features_selected = pickle.load(features_selected_in)
@@ -35,7 +35,7 @@ xgb_model = pickle.load(xgb_model_in)
 #explaner shap
 X_shap=X_test[features_selected]
 explainer = shap.TreeExplainer(xgb_model)
-shap_values = explainer(X_shap)
+#shap_values = explainer(X_shap)
 
 #shap_values = explainer(X_shap)
 @st.cache()
