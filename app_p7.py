@@ -50,9 +50,9 @@ sk_id_list = get_sk_id_list()
 #st.sidebar.header("ID Client")
 st.sidebar.markdown("<h1 style='text-align: center; color: black;'><strong><u>ID Client</u></strong></h1>",
                     unsafe_allow_html=True)
-sk_id_curr = st.sidebar.selectbox('Select SK_ID from list:', sk_id_list, 0)
+sk_id_curr = st.sidebar.selectbox('Choisir Dossier Client:', sk_id_list, 0)
 #seuil
-st.sidebar.header("Parametere")
+st.sidebar.header("Paramètre")
 threshold = st.sidebar.slider(
         label='Threshold:',
         min_value=0.,
@@ -90,10 +90,10 @@ else:
     st.markdown(html_temp2, unsafe_allow_html=True)
 
 
-st.markdown("<h2 style='text-align: center; color: black;'><strong><u>Interpretabilité</u></strong></h2>",
+st.markdown("<h2 style='text-align: center; color: black;'><strong><u>Interprétabilité </u></strong></h2>",
             unsafe_allow_html=True)
 
-submit=st.button("Explain")
+submit=st.button("Explication")
 
 # explain model prediction results
 def st_shap(plot, height=None):
@@ -106,10 +106,10 @@ if submit:
     shap.initjs()
 
     # visualize the first prediction's explanation (use matplotlib=True to avoid Javascript)
-    st.subheader('Model Prediction Interpretation Plot')
+    st.subheader('Graphique interprétation de la prédiction du modèle 1')
     st_shap(shap.force_plot(explainer.expected_value, shap_values.values[j], X_shap.iloc[j]))
 
-    st.subheader('Summary Plot 1')
+    st.subheader('Graphique interprétation de la prédiction du modèle 2 ')
 
 
     nb_features=20
@@ -133,7 +133,7 @@ var=['CNT_CHILDREN', 'AMT_CREDIT_x', 'AMT_ANNUITY',
        'ANNUITY_INCOME', 'CREDIT_LENGTH', 'YEAR_EMPLOYED_PERCENT',
        'CREDIT_TO_GOODS_RATIO', 'PAYMENT_RATE', 'ANNUITY_INCOME_PERS']
 
-variable=st.selectbox('choose variable', var)
+variable=st.selectbox('Choisir la variable', var)
 fig2 = px.histogram(df_test, x=variable)
 
 x_val=int(donnee[variable].values)
