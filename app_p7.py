@@ -106,10 +106,10 @@ if submit:
     shap.initjs()
 
     # visualize the first prediction's explanation (use matplotlib=True to avoid Javascript)
-    st.subheader('Graphique interprétation de la prédiction du modèle 1')
+    st.subheader('Interprétation de la prédiction du modèle :Graphique 1')
     st_shap(shap.force_plot(explainer.expected_value, shap_values.values[j], X_shap.iloc[j]))
 
-    st.subheader('Graphique interprétation de la prédiction du modèle 2 ')
+    st.subheader('Interprétation de la prédiction du modèle :Graphique 2 ')
 
 
     nb_features=20
