@@ -27,7 +27,7 @@ X_test=pd.read_csv('df_X_test.csv')#data transformed with predict probability an
 #shap_values_ = open("shap_value.pkl","rb")
 #shap_value = pickle.load(shap_values_)
 #features
-features_selected_in = open("feature_selected.pkl","rb")
+features_selected_in = open("features_selected.pkl","rb")
 features_selected = pickle.load(features_selected_in)
 #load lodel
 xgb_model_in = open("Best_model.pkl","rb")
