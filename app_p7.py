@@ -42,6 +42,7 @@ explainer = shap.TreeExplainer(xgb_model)
 def get_sk_id_list():
     # Getting the values of SK_IDS from the content
     SK_IDS = df_test['SK_ID_CURR']
+
     return SK_IDS
 sk_id_list = get_sk_id_list()
 
@@ -60,14 +61,18 @@ threshold = st.sidebar.slider(
         max_value=1.)
 
 #Display caracteristic of Client
-donnee=df_test[df_test['SK_ID_CURR']==sk_id_curr].drop(['Unnamed: 0'], axis=1)
+#donnee=df_test[df_test['SK_ID_CURR']==sk_id_curr].drop(['Unnamed: 0'], axis=1)
+donnee=df_test[df_test['SK_ID_CURR']==sk_id_curr]
+ix=df_test[df_test['SK_ID_CURR']==sk_id_curr].index
 
 st.subheader('Les informations du client')
 st.write(donnee)
 
 
 st.subheader('Decision')
-prob=X_test[X_test['SK_ID_CURR']==sk_id_curr][['Target_prob','Target_pred']]
+#prob=X_test[X_test['SK_ID_CURR']==sk_id_curr][['Target_prob','Target_pred']]
+prob=X_test[['Target_prob','Target_pred']].loc[ix]
+
 prb=int(prob['Target_prob'].values*100)
 predicted_class = np.where(prb/100 > threshold, 1, 0)
 st.markdown(f"**Default Risk:** {prb}**%**")
@@ -141,5 +146,3 @@ fig2.add_vline(x=x_val, line_width=3, line_dash="dash", line_color="green",
                annotation_text="ID_Client: "+str(x_val),
                annotation_position="top right",)
 st.plotly_chart(fig2)
-
-
