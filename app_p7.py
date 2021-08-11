@@ -80,7 +80,7 @@ st.markdown(f"**Default Risk:** {prb}**%**")
 
 if predicted_class == 0:
     html_temp = """
-        <div style="background-color:#ff634d">
+        <div style="background-color:green">
         <h3 style="color:white;text-align:center;">Crédit Accepté </h3>
         </div>
         """
@@ -89,7 +89,7 @@ if predicted_class == 0:
 else:
     #st.write('### Credit Rejeté')
     html_temp2 = """
-            <div style="background-color:orange">
+            <div style="background-color:red">
             <h3 style="color:white;text-align:center;">Crédit Rejeté </h3>
             </div>
             """
