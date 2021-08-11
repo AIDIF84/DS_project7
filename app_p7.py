@@ -30,7 +30,7 @@ shap_values = pickle.load(shap_values_)
 features_selected_in = open("features_selected.pkl","rb")
 features_selected = pickle.load(features_selected_in)
 #load lodel
-xgb_model_in = open("xgb_model.pkl","rb")
+xgb_model_in = open("Best_model.pkl","rb")
 xgb_model = pickle.load(xgb_model_in)
 #explaner shap
 X_shap=X_test[features_selected]
