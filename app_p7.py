@@ -24,10 +24,10 @@ X_test=pd.read_csv('df_X_test.csv')#data transformed with predict probability an
 #df_test = df_test.drop(['AMT_TOTAL_RECEIVABLE'], axis=1)
 
 #shap values
-shap_values_ = open("shap_values.pkl","rb")
-shap_values = pickle.load(shap_values_)
+#shap_values_ = open("shap_value.pkl","rb")
+#shap_value = pickle.load(shap_values_)
 #features
-features_selected_in = open("features_selected.pkl","rb")
+features_selected_in = open("feature_selected.pkl","rb")
 features_selected = pickle.load(features_selected_in)
 #load lodel
 xgb_model_in = open("Best_model.pkl","rb")
@@ -35,7 +35,8 @@ xgb_model = pickle.load(xgb_model_in)
 #explaner shap
 X_shap=X_test[features_selected]
 explainer = shap.TreeExplainer(xgb_model)
-#shap_values = explainer(X_shap)
+shap_value = explainer(X_shap)
+
 
 #shap_values = explainer(X_shap)
 @st.cache()
@@ -62,7 +63,7 @@ threshold = st.sidebar.slider(
 
 #Display caracteristic of Client
 #donnee=df_test[df_test['SK_ID_CURR']==sk_id_curr].drop(['Unnamed: 0'], axis=1)
-donnee=df_test[df_test['SK_ID_CURR']==sk_id_curr]
+donnee=df_test[df_test['SK_ID_CURR']==sk_id_curr].drop(['Unnamed: 0'], axis=1)
 ix=df_test[df_test['SK_ID_CURR']==sk_id_curr].index
 
 st.subheader('Les informations du client')
@@ -71,9 +72,9 @@ st.write(donnee)
 
 st.subheader('Decision')
 #prob=X_test[X_test['SK_ID_CURR']==sk_id_curr][['Target_prob','Target_pred']]
-prob=X_test[['Target_prob','Target_pred']].loc[ix]
+prob=X_test['Target_prob'].loc[ix]
 
-prb=int(prob['Target_prob'].values*100)
+prb=int(prob.values*100)
 predicted_class = np.where(prb/100 > threshold, 1, 0)
 st.markdown(f"**Default Risk:** {prb}**%**")
 
@@ -112,13 +113,13 @@ if submit:
 
     # visualize the first prediction's explanation (use matplotlib=True to avoid Javascript)
     st.subheader('Interprétation de la prédiction du modèle :Graphique 1')
-    st_shap(shap.force_plot(explainer.expected_value, shap_values.values[j], X_shap.iloc[j]))
+    st_shap(shap.force_plot(explainer.expected_value, shap_value.values[j], X_shap.iloc[j]))
 
     st.subheader('Interprétation de la prédiction du modèle :Graphique 2 ')
 
 
     nb_features=20
-    shap.plots.waterfall(shap_values[j])
+    shap.plots.waterfall(shap_value[j])
     plt.gcf().set_size_inches(16, nb_features / 2)
     # Plot the graph on the dashboard
     st.pyplot(plt.gcf())
