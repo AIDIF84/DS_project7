@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from PIL import Image
 import plotly.express as px
-
+from statistics import *
 import math
 
 
