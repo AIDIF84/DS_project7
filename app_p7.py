@@ -150,7 +150,6 @@ st.plotly_chart(fig2)
 
 st.markdown("<h2 style='text-align: center; color: black;'><strong><u>Comparaison</u></strong></h2>",
             unsafe_allow_html=True)
-variable2=st.selectbox('Choisir la variable', var)
 
 pred_df=df_test.copy()
 pred_df['pred']=predicted_class
@@ -160,5 +159,5 @@ mean_va_pos=mean(post_df.variable2)
 mean_va_neg=mean(neg_df.variable2)
 valeur=x_val
 datatable = pd.DataFrame([valeur,mean_va_neg,mean_va_pos],
-                   columns=['a', 'b', 'c'])
+                   columns=['Client', 'Moyenne_Défaut', 'Moyenne_Non_Défaut'])
 st.table(datatable)# will display the table
