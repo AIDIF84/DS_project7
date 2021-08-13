@@ -155,8 +155,8 @@ pred_df=df_test.copy()
 pred_df['pred']=predicted_class
 post_df=pred_df[pred_df.pred==1]
 neg_df=pred_df[pred_df.pred==0]
-mean_va_pos=mean(post_df.variable2)
-mean_va_neg=mean(neg_df.variable2)
+mean_va_pos=mean(post_df.variable)
+mean_va_neg=mean(neg_df.variable)
 valeur=x_val
 datatable = pd.DataFrame([valeur,mean_va_neg,mean_va_pos],
                    columns=['Client', 'Moyenne_Défaut', 'Moyenne_Non_Défaut'])
