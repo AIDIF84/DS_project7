@@ -158,6 +158,10 @@ neg_df=pred_df[pred_df.pred==0]
 mean_va_pos=post_df[variable].mean()
 mean_va_neg=neg_df[variable].mean()
 valeur=x_val
-datatable = pd.DataFrame([valeur,mean_va_neg,mean_va_pos],
-                   columns=['Client', 'Moyenne_Défaut', 'Moyenne_Non_Défaut'])
+# assign data of lists.  
+data = {'Variable': ['Client', 'Moyenne_Défaut', 'Moyenne_Non_Défaut'], 'Valeur': [valeur, mean_va_neg, mean_va_pos]}  
+  
+# Create DataFrame  
+datatable = pd.DataFrame(data) 
+
 st.table(datatable)# will display the table
