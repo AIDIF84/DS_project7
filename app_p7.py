@@ -20,7 +20,7 @@ st.sidebar.image(title_image)
 #loaing model and data
 df_test=pd.read_csv('test_var.csv')#original data without target
 X_test=pd.read_csv('df_X_test.csv')#data transformed with predict probability and target
-df_variable=pd.read_csv('variable.csv')#data définitions des variables
+df_variable=pd.read_csv('Variable.csv')#data définitions des variables
 
 # read pickle files
 #df_test = df_test.drop(['AMT_TOTAL_RECEIVABLE'], axis=1)
