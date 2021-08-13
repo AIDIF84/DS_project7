@@ -147,3 +147,18 @@ fig2.add_vline(x=x_val, line_width=3, line_dash="dash", line_color="green",
                annotation_text="ID_Client: "+str(x_val),
                annotation_position="top right",)
 st.plotly_chart(fig2)
+
+st.markdown("<h2 style='text-align: center; color: black;'><strong><u>Comparaison</u></strong></h2>",
+            unsafe_allow_html=True)
+variable2=st.selectbox('Choisir la variable', var)
+
+pred_df=df_test.copy()
+pred_df['pred']=predicted_class
+post_df=pred_df[pred_df.pred==1]
+neg_df=pred_df[pred_df.pred==0]
+mean_va_pos=mean(post_df.variable2)
+mean_va_neg=mean(neg_df.variable2)
+valeur=x_val
+datatable = pd.DataFrame([valeur,mean_va_neg,mean_va_pos],
+                   columns=['a', 'b', 'c'])
+st.table(datatable)# will display the table
