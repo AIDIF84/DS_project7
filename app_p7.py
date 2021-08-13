@@ -73,6 +73,7 @@ st.write(donnee)
 st.subheader('Decision')
 #prob=X_test[X_test['SK_ID_CURR']==sk_id_curr][['Target_prob','Target_pred']]
 prob=X_test['Target_prob'].loc[ix]
+pred_class = np.where(X_test['Target_prob'] > threshold, 1, 0)
 
 prb=int(prob.values*100)
 predicted_class = np.where(prb/100 > threshold, 1, 0)
@@ -152,10 +153,10 @@ st.markdown("<h2 style='text-align: center; color: black;'><strong><u>Comparaiso
             unsafe_allow_html=True)
 
 pred_df=df_test.copy()
-pred_df['pred']=predicted_class
+pred_df['pred']=pred_class
 post_df=pred_df[pred_df['pred']==1]
 neg_df=pred_df[pred_df['pred']==0]
-mean_va_pos=post_df[variable].max()
+mean_va_pos=post_df[variable].mean()
 mean_va_neg=neg_df[variable].mean()
 valeur=x_val
 # assign data of lists.  
