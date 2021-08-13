@@ -153,9 +153,9 @@ st.markdown("<h2 style='text-align: center; color: black;'><strong><u>Comparaiso
 
 pred_df=df_test.copy()
 pred_df['pred']=predicted_class
-post_df=pred_df[pred_df.pred==1]
-neg_df=pred_df[pred_df.pred==0]
-mean_va_pos=post_df[variable].mean()
+post_df=pred_df[pred_df['pred']==1]
+neg_df=pred_df[pred_df['pred']==0]
+mean_va_pos=post_df[variable].max()
 mean_va_neg=neg_df[variable].mean()
 valeur=x_val
 # assign data of lists.  
