@@ -171,7 +171,7 @@ mean_va_pos=post_df[variable].mean()
 mean_va_neg=neg_df[variable].mean()
 valeur=x_val
 # assign data of lists.  
-data = {'Variable': ['Client', 'Moyenne_Défaut', 'Moyenne_Non_Défaut'], 'Valeur': [valeur, mean_va_neg, mean_va_pos]}  
+data = {'Variable': ['Client', 'Moyenne_Non_Défaut', 'Moyenne_Défaut'], 'Valeur': [valeur, mean_va_neg, mean_va_pos]}  
   
 # Create DataFrame  
 datatable = pd.DataFrame(data) 
