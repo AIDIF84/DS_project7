@@ -12,7 +12,7 @@ SK_DPD_DEF,DPD (jours de retard) au cours du mois du crédit précédent
 CNT_INSTALMENT_FUTURE,Nombre année qui reste pour le paiement crédit
 CREDIT_DAY_OVERDUE,Nombre de jours retard de paiement
 DAYS_CREDIT_ENDDATE,Nombre de jours qui reste carte crédit
-Nombre_active,Nombre de crédit en cours
+Nombre_active,Nombre de crédit en cours dans d'autres agences ou banques
 NAME_CONTRACT_STATUS_Refused,Nombre de crédit refusé
 NAME_CONTRACT_STATUS_Approved,Nombre de crédit approuvé
 DAYS_REGISTRATION,Ancienneté
@@ -46,7 +46,6 @@ AMT_CREDIT_y,Moyenne de Montant du crédit précédent
 Diff_day,Moyenne des jours de retard du crédit précédent
 SK_DPD_DEF,Nombre moyen des jours (jours de retard) les dpd avec tolérance
 CNT_INSTALMENT_FUTURE,Nombre de jours qui reste pour les crédit
-Status_active,Nombre de crédit active
+Status_active,Nombre de crédit active dans notre banque
 Comsumer_type_crd,Nombre de crédit de consommation
-Nombre_active,Nombre de crédit en cours
 AMT_CREDIT_SUM,Moyenne de la somme de montant des crédits
