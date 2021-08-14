@@ -26,7 +26,7 @@ YEAR_EMPLOYED_PERCENT,Nombre d'année d travaille
 CREDIT_TO_GOODS_RATIO,Taux d'apport personnel
 CREDIT_LENGTH,Nbr d'années de remboursement
 CREDIT_INCOME,Taux de REVENU / CRÉDIT
-ANNUITY_INCOME,Taux de remboursement par an / au revenue
+ANNUITY_INCOME,Taux de remboursement par an / revenue
 FLAG_OWN_REALTY,Si le client possède des biens
 FLAG_OWN_CAR,Si le client possède une voiture
 CODE_GENDER,Genre du client
@@ -35,7 +35,6 @@ PAYMENT_RATE,Taux d'interêt
 CREDIT_TO_GOODS_RATIO,Montant de l'apport et taux
 YEAR_EMPLOYED_PERCENT,Nombre d'année d travaille
 CREDIT_LENGTH,Nbr d'années de remboursement du crédit précédent
-ANNUITY_INCOME,Taux de remboursement par an / au revenu
 CREDIT_INCOME,Taux de REVENU / CRÉDIT
 REJECT_REASON,Nbr XNA reject reason
 NAME_CONTRACT_STATUS_Refused,Nbre de demandes refusées
