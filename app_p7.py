@@ -124,7 +124,9 @@ if submit:
 
 
     nb_features=20
-    shap.plots.waterfall(shap_value[j])
+    # plot the global importance of each feature
+    shap.plots.bar(shap_values[j], show=False)
+    #shap.plots.waterfall(shap_value[j])
     plt.gcf().set_size_inches(16, nb_features / 2)
     # Plot the graph on the dashboard
     st.pyplot(plt.gcf())
