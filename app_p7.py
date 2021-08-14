@@ -129,7 +129,7 @@ if submit:
     st.subheader('Interprétation de la prédiction du modèle générale')
     # plot the distribution of importances for each feature over all samples
     nb=20
-    shap.summary_plot(shap_value,X_shap)
+    shap.summary_plot(shap_value,X_shap, plot_type="bar")
     plt.gcf().set_size_inches(16, nb / 2)
     st.pyplot(plt.gcf())
     #st_shap(shap.force_plot(explainer.expected_value, shap_value.values[j], X_shap.iloc[j]))
