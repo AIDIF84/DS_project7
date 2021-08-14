@@ -139,7 +139,7 @@ if submit:
 st.markdown("<h2 style='text-align: center; color: black;'><strong><u>Analyse</u></strong></h2>",
             unsafe_allow_html=True)
 #Analyse
-var=['CNT_CHILDREN', 'AMT_CREDIT_x', 'AMT_ANNUITY',
+var=['AMT_CREDIT_x', 'CNT_CHILDREN', 'AMT_ANNUITY',
        'AMT_GOODS_PRICE','DAYS_REGISTRATION', 'EXT_SOURCE_1', 'EXT_SOURCE_2', 'EXT_SOURCE_3',
        'Diff_day','Diff_pay', 'AMT_CREDIT_y', 'AMT_DOWN_PAYMENT',
        'NAME_CONTRACT_STATUS_Approved', 'NAME_CONTRACT_STATUS_Canceled',
