@@ -72,8 +72,8 @@ ix=df_test[df_test['SK_ID_CURR']==sk_id_curr].index
 st.subheader('Les informations du client')
 st.write(donnee)
 
-
-st.subheader('Decision')
+st.markdown("<h2 style='text-align: center; color: black;'><strong><u>Décision </u></strong></h2>",
+            unsafe_allow_html=True)
 #prob=X_test[X_test['SK_ID_CURR']==sk_id_curr][['Target_prob','Target_pred']]
 prob=X_test['Target_prob'].loc[ix]
 pred_class = np.where(X_test['Target_prob'] > threshold, 1, 0)
@@ -127,11 +127,13 @@ if submit:
     st.pyplot(plt.gcf())
 
     st.subheader('Interprétation de la prédiction du modèle générale')
+    shap_image = Image.open("shap.png")
+    st.image(shap_image)
     # plot the distribution of importances for each feature over all samples
-    nb=20
-    shap.summary_plot(shap_value,X_shap, plot_type="bar")
-    plt.gcf().set_size_inches(16, nb / 2)
-    st.pyplot(plt.gcf())
+    #nb=20
+    #shap.summary_plot(shap_value,X_shap, plot_type="bar")
+   # plt.gcf().set_size_inches(16, nb / 2)
+    #st.pyplot(plt.gcf())
     #st_shap(shap.force_plot(explainer.expected_value, shap_value.values[j], X_shap.iloc[j]))
 
 st.markdown("<h2 style='text-align: center; color: black;'><strong><u>Analyse</u></strong></h2>",
