@@ -115,20 +115,24 @@ if submit:
     j=int(j)
     shap.initjs()
 
-    # visualize the first prediction's explanation (use matplotlib=True to avoid Javascript)
-    #st.subheader('Interprétation de la prédiction du modèle :Graphique 1')
-    #st_shap(shap.force_plot(explainer.expected_value, shap_value.values[j], X_shap.iloc[j]))
-
-    st.subheader('Interprétation de la prédiction du modèle ')
 
 
+    st.subheader('Interprétation de la prédiction du modèle pour le client')
     nb_features=20
     # plot the global importance of each feature
-    shap.plots.bar(shap_values[j], show=False)
+    shap.plots.bar(shap_value[j], show=False)
     #shap.plots.waterfall(shap_value[j])
     plt.gcf().set_size_inches(16, nb_features / 2)
     # Plot the graph on the dashboard
     st.pyplot(plt.gcf())
+
+    st.subheader('Interprétation de la prédiction du modèle générale')
+    # plot the distribution of importances for each feature over all samples
+    nb=20
+    shap.plots.summary(shap_value)
+    plt.gcf().set_size_inches(16, bn / 2)
+    st.pyplot(plt.gcf())
+    #st_shap(shap.force_plot(explainer.expected_value, shap_value.values[j], X_shap.iloc[j]))
 
 st.markdown("<h2 style='text-align: center; color: black;'><strong><u>Analyse</u></strong></h2>",
             unsafe_allow_html=True)
