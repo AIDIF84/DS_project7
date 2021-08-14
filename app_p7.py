@@ -24,6 +24,8 @@ df_variable=pd.read_csv('Variable.csv')#data définitions des variables
 
 # read pickle files
 #df_test = df_test.drop(['AMT_TOTAL_RECEIVABLE'], axis=1)
+df_test.rename(columns={'YEAR_EMPLOYED_PERCENT': 'YEAR_EMPLOYED'}, inplace=True)
+X_test.rename(columns={'YEAR_EMPLOYED_PERCENT': 'YEAR_EMPLOYED'}, inplace=True)
 
 #shap values
 shap_values_ = open("shap_values.pkl","rb")
@@ -139,7 +141,7 @@ var=['CNT_CHILDREN', 'AMT_CREDIT_x', 'AMT_ANNUITY',
        'AMT_TOTAL_RECEIVABLE', 'AMT_CREDIT_LIMIT_ACTUAL', 'AMT_BALANCE',
        'CREDIT_DAY_OVERDUE', 'DAYS_CREDIT_ENDDATE', 'AMT_CREDIT_SUM',
        'Nombre_active', 'Comsumer_type_crd', 'Age', 'CREDIT_INCOME',
-       'ANNUITY_INCOME', 'CREDIT_LENGTH', 'YEAR_EMPLOYED_PERCENT',
+       'ANNUITY_INCOME', 'CREDIT_LENGTH', 'YEAR_EMPLOYED',
        'CREDIT_TO_GOODS_RATIO', 'PAYMENT_RATE', 'ANNUITY_INCOME_PERS']
 
 variable=st.selectbox('Choisir la variable', var)
