@@ -1,12 +1,11 @@
 Name,Definition
 TARGET,Etiquette 0 ou 1
 AMT_DRAWINGS,Moyenne du montant du prélèvement par carte crédit
-MONTHS_BALANCE,Mois du solde par rapport à la date de la demande (-1 signifie la date du solde le plus récent)
 AMT_TOTAL_RECEIVABLE, Moyenne du TOTAL DU MONTANT RECEVABLE
 AMT_CREDIT_LIMIT_ACTUAL,Moyenne de la Limite de la carte de crédit pendant le mois du crédit précédent
 AMT_BALANCE,Moyenne Solde au cours du mois du crédit
 CREDIT_DAY_OVERDUE,Nombre de jours en retard de paiement
-DAYS_CREDIT_ENDDATE,nombre de jours qui reste pour la fin du crédit
+DAYS_CREDIT_ENDDATE,Nombre de jours qui reste pour la fin du crédit
 AMT_REQ_CREDIT_BUREAU_YEAR,Nombre de demandes de renseignements au Bureau de crédit concernant le client
 SK_DPD_DEF,DPD (jours de retard) au cours du mois du crédit précédent
 CNT_INSTALMENT_FUTURE,Nombre année qui reste pour le paiement crédit
@@ -27,8 +26,8 @@ CREDIT_TO_GOODS_RATIO,Taux d'apport personnel
 CREDIT_LENGTH,Nbr d'années de remboursement
 CREDIT_INCOME,Taux de REVENU / CRÉDIT
 ANNUITY_INCOME,Taux de remboursement par an / revenue
-FLAG_OWN_REALTY,Si le client possède des biens
-FLAG_OWN_CAR,Si le client possède une voiture
+FLAG_OWN_REALTY,Le client possède des biens
+FLAG_OWN_CAR,Le client possède une voiture
 CODE_GENDER,Genre du client
 NAME_CONTRACT_TYPE,Le prêt est cash ou renouvelable
 PAYMENT_RATE,Taux d'interêt
