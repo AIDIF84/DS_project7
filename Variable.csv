@@ -32,7 +32,7 @@ FLAG_OWN_CAR,Si le client possède une voiture
 CODE_GENDER,Genre du client
 NAME_CONTRACT_TYPE,Le prêt est cash ou renouvelable
 PAYMENT_RATE,Taux d'interêt
-CREDIT_TO_GOODS_RATIO,Montant de l'apport et taux
+CREDIT_TO_GOODS_RATIO,Pourcetage de l'apport personnel
 YEAR_EMPLOYED_PERCENT,Nombre d'année d travaille
 CREDIT_LENGTH,Nbr d'années de remboursement du crédit précédent
 CREDIT_INCOME,Taux de REVENU / CRÉDIT
