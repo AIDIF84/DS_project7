@@ -139,17 +139,12 @@ if submit:
 st.markdown("<h2 style='text-align: center; color: black;'><strong><u>Analyse</u></strong></h2>",
             unsafe_allow_html=True)
 #Analyse
-var=['AMT_CREDIT_x', 'CNT_CHILDREN', 'AMT_ANNUITY',
-       'AMT_GOODS_PRICE','DAYS_REGISTRATION', 'EXT_SOURCE_1', 'EXT_SOURCE_2', 'EXT_SOURCE_3',
-       'Diff_day','Diff_pay', 'AMT_CREDIT_y', 'AMT_DOWN_PAYMENT',
-       'NAME_CONTRACT_STATUS_Approved', 'NAME_CONTRACT_STATUS_Canceled',
-       'NAME_CONTRACT_STATUS_Refused', 'REJECT_REASON', 'Status_active',
-       'CNT_INSTALMENT_FUTURE', 'SK_DPD_DEF', 'AMT_DRAWINGS', 'MONTHS_BALANCE',
-       'AMT_TOTAL_RECEIVABLE', 'AMT_CREDIT_LIMIT_ACTUAL', 'AMT_BALANCE',
-       'CREDIT_DAY_OVERDUE', 'DAYS_CREDIT_ENDDATE', 'AMT_CREDIT_SUM',
-       'Nombre_active', 'Comsumer_type_crd', 'Age', 'CREDIT_INCOME',
-       'ANNUITY_INCOME', 'CREDIT_LENGTH', 'YEAR_EMPLOYED_PERCENT',
-       'CREDIT_TO_GOODS_RATIO', 'PAYMENT_RATE', 'ANNUITY_INCOME_PERS']
+var=['Age', 'AMT_ANNUITY', 'AMT_BALANCE', 'AMT_CREDIT_LIMIT_ACTUAL', 'AMT_CREDIT_SUM', 'AMT_CREDIT_x', 'AMT_CREDIT_y', 'AMT_DOWN_PAYMENT',
+     'AMT_DRAWINGS', 'AMT_GOODS_PRICE','DAYS_REGISTRATION', 'AMT_TOTAL_RECEIVABLE', 'ANNUITY_INCOME', 'ANNUITY_INCOME_PERS','DAYS_ID_PUBLISH',
+     'CNT_CHILDREN', 'CNT_INSTALMENT_FUTURE', 'Comsumer_type_crd', 'CREDIT_DAY_OVERDUE', 'CREDIT_INCOME', 'CREDIT_LENGTH', 'CREDIT_TO_GOODS_RATIO',
+     'DAYS_CREDIT_ENDDATE', 'Diff_day','Diff_pay', 'EXT_SOURCE_1', 'EXT_SOURCE_2', 'EXT_SOURCE_3', 'MONTHS_BALANCE', 'NAME_CONTRACT_STATUS_Approved',
+     'NAME_CONTRACT_STATUS_Canceled','NAME_CONTRACT_STATUS_Refused', 'Nombre_active', 'PAYMENT_RATE', 'REJECT_REASON', 'SK_DPD_DEF', 'Status_active',
+     'YEAR_EMPLOYED_PERCENT',]
 
 variable=st.selectbox('Choisir la variable', var)
 fig2 = px.histogram(df_test, x=variable)
