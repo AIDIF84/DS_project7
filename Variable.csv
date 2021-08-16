@@ -1,49 +1,51 @@
 Name,Definition
-TARGET,Etiquette 0 ou 1
-AMT_DRAWINGS,Moyenne du montant du prélèvement par carte crédit
-AMT_TOTAL_RECEIVABLE, Moyenne du TOTAL DU MONTANT RECEVABLE
-AMT_CREDIT_LIMIT_ACTUAL,Moyenne de la Limite de la carte de crédit pendant le mois du crédit précédent
 AMT_BALANCE,Moyenne Solde au cours du mois du crédit
-CREDIT_DAY_OVERDUE,Nombre de jours en retard de paiement
-DAYS_CREDIT_ENDDATE,Nombre de jours qui reste pour la fin du crédit
+AMT_CREDIT_LIMIT_ACTUAL,Moyenne de la Limite de la carte de crédit pendant le mois du crédit précédent
+AMT_CREDIT_SUM,Moyenne de la somme de montant des crédits
+AMT_CREDIT_y,Moyenne de Montant du crédit précédent
+AMT_DOWN_PAYMENT,Moyenne de Montant de l'apport personnel sur crédit précédent
+AMT_DRAWINGS,Moyenne du montant du prélèvement par carte crédit
 AMT_REQ_CREDIT_BUREAU_YEAR,Nombre de demandes de renseignements au Bureau de crédit concernant le client
-SK_DPD_DEF,DPD (jours de retard) au cours du mois du crédit précédent
-CNT_INSTALMENT_FUTURE,Nombre année qui reste pour le paiement crédit
-CREDIT_DAY_OVERDUE,Nombre de jours retard de paiement
-DAYS_CREDIT_ENDDATE,Nombre de jours qui reste carte crédit
-Nombre_active,Nombre de crédit en cours dans d'autres agences ou banques
-NAME_CONTRACT_STATUS_Refused,Nombre de crédit refusé
-NAME_CONTRACT_STATUS_Approved,Nombre de crédit approuvé
-DAYS_REGISTRATION,Ancienneté
+AMT_TOTAL_RECEIVABLE, Moyenne du TOTAL DU MONTANT RECEVABLE
+ANNUITY_INCOME,Taux de remboursement par an / revenue
 Age,Age
-REGION_POPULATION_RELATIVE,Région pour assurer l'achat et la vente après
+CNT_INSTALMENT_FUTURE,Nombre de jours qui reste pour les crédit
+CNT_INSTALMENT_FUTURE,Nombre année qui reste pour le paiement crédit
+CODE_GENDER,Genre du client
+CREDIT_DAY_OVERDUE,Nombre de jours retard de paiement
+CREDIT_DAY_OVERDUE,Nombre de jours en retard de paiement
+CREDIT_INCOME,Taux de REVENU / CRÉDIT
+CREDIT_INCOME,Taux de REVENU / CRÉDIT
+CREDIT_LENGTH,Nbr d'années de remboursement
+CREDIT_LENGTH,Nbr d'années de remboursement du crédit précédent
+CREDIT_TO_GOODS_RATIO,Taux d'apport personnel
+CREDIT_TO_GOODS_RATIO,Pourcetage de l'apport personnel
+Comsumer_type_crd,Nombre de crédit de consommation
+DAYS_CREDIT_ENDDATE,Nombre de jours qui reste pour la fin du crédit
+DAYS_CREDIT_ENDDATE,Nombre de jours qui reste carte crédit
+DAYS_ID_PUBLISH,NB de jours depuis demandé le prêt
+DAYS_REGISTRATION,Ancienneté
+Diff_day,Moyenne des jours de retard du crédit précédent
+EXT_SOURCE_1,Score normalisé à partir d'une source de données externe
+FLAG_OWN_CAR,Le client possède une voiture
+FLAG_OWN_REALTY,Le client possède des biens
+NAME_CONTRACT_STATUS_Approved,Nombre de crédit approuvé
+NAME_CONTRACT_STATUS_Approved,Nbre de demandes approuvées
+NAME_CONTRACT_STATUS_Canceled,Nbre de demandes annulées
+NAME_CONTRACT_STATUS_Refused,Nbre de demandes refusées
+NAME_CONTRACT_STATUS_Refused,Nombre de crédit refusé
+NAME_CONTRACT_TYPE,Le prêt est cash ou renouvelable
+NAME_FAMILY_STATUS,Situation familiale
 NAME_HOUSING_TYPE,Type d'achat
 NAME_INCOME_TYPE,Type de revenu
-NAME_FAMILY_STATUS,Situation familiale
-PAYMENT_RATE,Taux de paiement
-YEAR_EMPLOYED_PERCENT,Nombre d'année d travaille
-CREDIT_TO_GOODS_RATIO,Taux d'apport personnel
-CREDIT_LENGTH,Nbr d'années de remboursement
-CREDIT_INCOME,Taux de REVENU / CRÉDIT
-ANNUITY_INCOME,Taux de remboursement par an / revenue
-FLAG_OWN_REALTY,Le client possède des biens
-FLAG_OWN_CAR,Le client possède une voiture
-CODE_GENDER,Genre du client
-NAME_CONTRACT_TYPE,Le prêt est cash ou renouvelable
+Nombre_active,Nombre de crédit en cours dans d'autres agences ou banques
 PAYMENT_RATE,Taux d'interêt
-CREDIT_TO_GOODS_RATIO,Pourcetage de l'apport personnel
-YEAR_EMPLOYED_PERCENT,Nombre d'année d travaille
-CREDIT_LENGTH,Nbr d'années de remboursement du crédit précédent
-CREDIT_INCOME,Taux de REVENU / CRÉDIT
+PAYMENT_RATE,Taux de paiement
+REGION_POPULATION_RELATIVE,Région pour assurer l'achat et la vente après
 REJECT_REASON,Nbr XNA reject reason
-NAME_CONTRACT_STATUS_Refused,Nbre de demandes refusées
-NAME_CONTRACT_STATUS_Canceled,Nbre de demandes annulées
-NAME_CONTRACT_STATUS_Approved,Nbre de demandes approuvées
-AMT_DOWN_PAYMENT,Moyenne de Montant de l'apport personnel sur crédit précédent
-AMT_CREDIT_y,Moyenne de Montant du crédit précédent
-Diff_day,Moyenne des jours de retard du crédit précédent
+SK_DPD_DEF,DPD (jours de retard) au cours du mois du crédit précédent
 SK_DPD_DEF,Nombre moyen des jours (jours de retard) les dpd avec tolérance
-CNT_INSTALMENT_FUTURE,Nombre de jours qui reste pour les crédit
 Status_active,Nombre de crédit active dans notre banque
-Comsumer_type_crd,Nombre de crédit de consommation
-AMT_CREDIT_SUM,Moyenne de la somme de montant des crédits
+TARGET,Etiquette 0 ou 1
+YEAR_EMPLOYED_PERCENT,Nombre d'année d travaille
+YEAR_EMPLOYED_PERCENT,Nombre d'année d travaille
