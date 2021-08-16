@@ -154,7 +154,7 @@ var=['AMT_CREDIT_x', 'CNT_CHILDREN', 'AMT_ANNUITY',
 variable=st.selectbox('Choisir la variable', var)
 fig2 = px.histogram(df_test, x=variable)
 
-x_val=int(donnee[variable].values)
+x_val=float(donnee[variable].values)
 fig2.add_vline(x=x_val, line_width=3, line_dash="dash", line_color="green",
                annotation_text="ID_Client: "+str(x_val),
                annotation_position="top right",)
