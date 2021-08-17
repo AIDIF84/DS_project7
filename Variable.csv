@@ -23,7 +23,7 @@ CREDIT_TO_GOODS_RATIO,Pourcetage de l'apport personnel
 Comsumer_type_crd,Nombre de crédit de consommation
 DAYS_CREDIT_ENDDATE,Nombre de jours qui reste pour la fin du crédit
 DAYS_CREDIT_ENDDATE,Nombre de jours qui reste carte crédit
-DAYS_ID_PUBLISH,NB de jours depuis demandé le prêt
+DAYS_ID_PUBLISH,NB de jours depuis la demande du prêt
 DAYS_REGISTRATION,Ancienneté
 Diff_day,Moyenne des jours de retard du crédit précédent
 EXT_SOURCE_1,Score normalisé à partir d'une source de données externe
